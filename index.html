@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stella A. Ibor | Data & Risk Analyst</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --primary: #1f4f7b;
+      --accent: #f4a261;
+      --bg: #f7f7fb;
+      --text: #222;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0b2545, #1f4f7b);
+      color: #fff;
+      padding: 1.2rem 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 1.2rem;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      max-width: 1100px;
+      margin: 2.5rem auto;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.5fr);
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.8rem;
+      color: #0b2545;
+    }
+
+    .hero h2 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #335c81;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      margin-bottom: 1.2rem;
+    }
+
+    .tagline {
+      font-style: italic;
+      color: #555;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-top: 0.5rem;
+    }
+
+    .btn {
+      border: none;
+      cursor: pointer;
+      padding: 0.7rem 1.2rem;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #222;
+      font-weight: 600;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid #fff;
+      color: #fff;
+    }
+
+    .hero-card {
+      background: #fff;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    }
+
+    .hero-card h3 {
+      margin-bottom: 0.8rem;
+      font-size: 1rem;
+      color: #0b2545;
+    }
+
+    .pill {
+      display: inline-block;
+      background: #e3edf7;
+      color: #1f4f7b;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      margin: 0.15rem;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: 2.5rem auto;
+      padding: 0 1.5rem;
+    }
+
+    section h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      color: #0b2545;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 0.9rem;
+      padding: 1.2rem 1.3rem;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+    }
+
+    .card h3 {
+      font-size: 1.05rem;
+      margin-bottom: 0.4rem;
+      color: #1f4f7b;
+    }
+
+    .card h4 {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #555;
+      margin-bottom: 0.4rem;
+    }
+
+    .card small {
+      display: block;
+      font-size: 0.8rem;
+      color: #777;
+      margin-bottom: 0.6rem;
+    }
+
+    .card ul {
+      padding-left: 1.1rem;
+      font-size: 0.9rem;
+    }
+
+    .card ul li {
+      margin-bottom: 0.25rem;
+    }
+
+    .chips {
+      margin-top: 0.6rem;
+    }
+
+    .chips span {
+      font-size: 0.78rem;
+      background: #f1f3f8;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      margin-right: 0.3rem;
+      margin-bottom: 0.3rem;
+      display: inline-block;
+    }
+
+    .timeline {
+      border-left: 2px solid #dde3f0;
+      padding-left: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    .timeline-item {
+      margin-bottom: 1.2rem;
+      position: relative;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -1.35rem;
+      top: 0.25rem;
+      width: 10px;
+      height: 10px;
+      background: var(--accent);
+      border-radius: 50%;
+    }
+
+    .timeline-item h3 {
+      font-size: 1rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .timeline-item small {
+      font-size: 0.8rem;
+      color: #777;
+    }
+
+    .contact {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: 1.5rem;
+      align-items: flex-start;
+    }
+
+    .contact-details p {
+      margin-bottom: 0.4rem;
+      font-size: 0.95rem;
+    }
+
+    .contact-details a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .contact-details a:hover {
+      text-decoration: underline;
+    }
+
+    form {
+      background: #fff;
+      padding: 1.2rem 1.3rem;
+      border-radius: 0.9rem;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+    }
+
+    label {
+      display: block;
+      font-size: 0.85rem;
+      margin-bottom: 0.25rem;
+      color: #444;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 0.55rem 0.6rem;
+      margin-bottom: 0.7rem;
+      border-radius: 0.4rem;
+      border: 1px solid #ccd4e0;
+      font-size: 0.9rem;
+    }
+
+    textarea {
+      min-height: 90px;
+      resize: vertical;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem 1rem 2rem;
+      font-size: 0.85rem;
+      color: #777;
+    }
+
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+      .contact {
+        grid-template-columns: 1fr;
+      }
+      nav {
+        display: none;
+      }
+      header {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav-container">
+    <div class="logo">STELLA A. IBOR</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div>
+    <h1>Data, Risk & Behavioural Insight Analyst</h1>
+    <h2>Transforming sensitive, complex datasets into clarity, safety, and evidence‑based decisions.</h2>
+    <p class="tagline">
+      Specialist in risk analysis, behavioural insight, safeguarding intelligence, and operational decision support.
+    </p>
+    <p>
+      I’m <strong>Stella A. Ibor</strong>, an analytical professional with experience across justice, operational, and care environments.
+      I specialise in identifying harm patterns, analysing behavioural indicators, and producing actionable intelligence
+      that improves safety, reduces risk, and supports vulnerable individuals.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#experience" class="btn btn-primary">View Experience</a>
+      <a href="#projects" class="btn btn-outline">View Projects</a>
+    </div>
+  </div>
+
+  <aside class="hero-card">
+    <h3>Core Technical Skills</h3>
+    <span class="pill">Python</span>
+    <span class="pill">SQL</span>
+    <span class="pill">Power BI</span>
+    <span class="pill">Tableau</span>
+    <span class="pill">Excel (Advanced)</span>
+    <span class="pill">Data Governance</span>
+    <span class="pill">Risk Analysis</span>
+    <span class="pill">Behavioural Insight</span>
+  </aside>
+</section>
+
+<section id="about">
+  <h2>About Me</h2>
+  <div class="card">
+    <p>
+      I analyse sensitive datasets to uncover behavioural patterns, risk indicators, and early signs of harm.
+      My work supports safeguarding, operational decision‑making, and policy development across justice, healthcare,
+      and public‑sector environments. I combine technical capability with strong judgement, confidentiality, and
+      a deep understanding of vulnerability and escalation pathways.
+    </p>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Technical Skills</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Data & Analytics</h3>
+      <ul>
+        <li>Python (pandas, NumPy, Matplotlib, Seaborn)</li>
+        <li>SQL (extraction, transformation, optimisation)</li>
+        <li>Power BI (DAX, modelling, dashboards)</li>
+        <li>Tableau (visual analytics)</li>
+        <li>Excel (advanced formulas, automation)</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Professional Capabilities</h3>
+      <ul>
+        <li>Risk assessment & harm pattern identification</li>
+        <li>Behavioural insight & escalation analysis</li>
+        <li>Data governance & ethical handling</li>
+        <li>Trend analysis & predictive indicators</li>
+        <li>Stakeholder communication</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Employment History</h2>
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <h3>Data Analyst — Ministry of Justice</h3>
+      <small>Oct 2025 – Present</small>
+      <p>
+        Conduct dynamic risk assessments, analyse behavioural patterns, and produce intelligence updates to support
+        safeguarding and operational decisions. Handle sensitive datasets with strict confidentiality.
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <h3>Data Scientist (Remote, Part‑Time)</h3>
+      <small>2024 – Present</small>
+      <p>
+        Analyse multi‑source datasets using Python and SQL, build dashboards, and apply statistical techniques to
+        identify risk indicators and behavioural trends.
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <h3>BI Analyst</h3>
+      <small>Apr 2023 – 2024</small>
+      <p>
+        Developed Power BI dashboards tracking operational performance, risk indicators, and behavioural trends.
+        Improved data quality and delivered insights to non‑technical stakeholders.
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <h3>Healthcare Analyst</h3>
+      <small>2022 – Oct 2025</small>
+      <p>
+        Analysed incident, behaviour, and health‑related data to identify risk patterns. Built monitoring tools that
+        reduced high‑risk incidents and improved documentation accuracy.
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <h3>Business Strategy Analyst</h3>
+      <small>2015 – 2022</small>
+      <p>
+        Conducted operational and financial analysis to support strategic planning, resource allocation, and
+        performance improvement.
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <h3>Operational Analyst</h3>
+      <small>2009 – 2023</small>
+      <p>
+        Analysed operational data to identify inefficiencies, risks, and improvement opportunities. Produced reports
+        and dashboards for senior stakeholders.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section id="achievements">
+  <h2>Key Achievements</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Risk Trend Dashboard</h3>
+      <p>Enabled earlier intervention and reduced high‑risk incidents by <strong>22%</strong> in six months.</p>
+    </div>
+    <div class="card">
+      <h3>Documentation Accuracy Improvement</h3>
+      <p>Improved care documentation accuracy from <strong>68%</strong> to <strong>95%</strong> in three months.</p>
+    </div>
+    <div class="card">
+      <h3>Harm Recurrence Reduction</h3>
+      <p>Reduced repeat harm incidents by <strong>30%</strong> in one quarter through monitoring improvements.</p>
+    </div>
+    <div class="card">
+      <h3>Medication Error Reduction</h3>
+      <p>Cut medication timing errors by <strong>40%</strong> in eight weeks through workflow optimisation.</p>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+
+  <h3>Power BI Projects</h3>
+  <div class="grid">
+    <div class="card">
+      <h3>Risk Trend Dashboard</h3>
+      <p>Power BI dashboard analysing behavioural indicators, escalation triggers, and risk patterns.</p>
+    </div>
+    <div class="card">
+      <h3>Operational Performance Dashboard</h3>
+      <p>Tracked KPIs, staffing, incidents, and compliance metrics for leadership decision‑making.</p>
+    </div>
+  </div>
+
+  <h3>Python & SQL Projects</h3>
+  <div class="grid">
+    <div class="card">
+      <h3>Behavioural Pattern Analysis</h3>
+      <p>Python + SQL workflow identifying early signs of harm, anomalies, and behavioural change.</p>
+    </div>
+    <div class="card">
+      <h3>Multi‑Source Data Integration</h3>
+      <p>Combined operational, behavioural, and incident datasets to produce predictive indicators.</p>
+    </div>
+  </div>
+
+  <h3>Healthcare & Safeguarding Analytics</h3>
+  <div class="grid">
+    <div class="card">
+      <h3>Care Plan Audit Tool</h3>
+      <p>Improved documentation accuracy from 68% to 95% through audit analysis and workflow redesign.</p>
+    </div>
+    <div class="card">
+      <h3>Harm Recurrence Monitoring</h3>
+      <p>Reduced repeat harm incidents by 30% using data‑driven monitoring and escalation checks.</p>
+    </div>
+  </div>
+
+  <h3>Strategic & Operational Analysis</h3>
+  <div class="grid">
+    <div class="card">
+      <h3>Resource Allocation Analysis</h3>
+      <p>Supported strategic planning and operational efficiency through quantitative analysis.</p>
+    </div>
+    <div class="card">
+      <h3>Performance Gap Identification</h3>
+      <p>Identified operational inefficiencies and recommended improvements based
