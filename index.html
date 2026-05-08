@@ -4,85 +4,91 @@
   <meta charset="UTF-8" />
   <title>Stella A. Ibor | Data & Risk Analyst</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Modern Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      --primary: #1f4f7b;
-      --accent: #f4a261;
-      --bg: #f7f7fb;
-      --text: #222;
+      --primary: #0d1b2a;
+      --secondary: #1b263b;
+      --accent: #e0aaff;
+      --bg: #f8f9fc;
+      --text: #1a1a1a;
+      --card: #ffffff;
     }
 
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      box-sizing: border-box;
+      font-family: "Inter", sans-serif;
     }
 
     body {
       background: var(--bg);
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     header {
-      background: linear-gradient(135deg, #0b2545, #1f4f7b);
-      color: #fff;
+      background: var(--primary);
       padding: 1.2rem 1.5rem;
       position: sticky;
       top: 0;
       z-index: 10;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
     }
 
     .nav-container {
-      max-width: 1100px;
-      margin: 0 auto;
+      max-width: 1200px;
+      margin: auto;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
     }
 
     .logo {
+      color: #fff;
+      font-size: 1.2rem;
       font-weight: 700;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.05em;
     }
 
     nav a {
       color: #fff;
-      text-decoration: none;
       margin-left: 1.2rem;
+      text-decoration: none;
       font-size: 0.95rem;
+      font-weight: 400;
     }
 
     nav a:hover {
-      text-decoration: underline;
+      color: var(--accent);
     }
 
     .hero {
-      max-width: 1100px;
-      margin: 2.5rem auto;
+      max-width: 1200px;
+      margin: 3rem auto;
       padding: 0 1.5rem;
       display: grid;
-      grid-template-columns: minmax(0, 2fr) minmax(0, 1.5fr);
+      grid-template-columns: 1.5fr 1fr;
       gap: 2rem;
       align-items: center;
     }
 
     .hero h1 {
-      font-size: 2.2rem;
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--primary);
       margin-bottom: 0.8rem;
-      color: #0b2545;
     }
 
     .hero h2 {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       font-weight: 500;
-      color: #335c81;
+      color: var(--secondary);
       margin-bottom: 1rem;
-    }
-
-    .hero p {
-      margin-bottom: 1.2rem;
     }
 
     .tagline {
@@ -92,67 +98,72 @@
     }
 
     .hero-buttons {
+      margin-top: 1rem;
       display: flex;
-      flex-wrap: wrap;
-      gap: 0.8rem;
-      margin-top: 0.5rem;
+      gap: 1rem;
     }
 
     .btn {
-      border: none;
-      cursor: pointer;
-      padding: 0.7rem 1.2rem;
-      border-radius: 999px;
-      font-size: 0.95rem;
+      padding: 0.75rem 1.4rem;
+      border-radius: 8px;
       text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
       display: inline-block;
     }
 
     .btn-primary {
       background: var(--accent);
-      color: #222;
-      font-weight: 600;
+      color: #000;
     }
 
     .btn-outline {
-      background: transparent;
-      border: 1px solid #fff;
-      color: #fff;
+      border: 2px solid var(--accent);
+      color: var(--accent);
     }
 
     .hero-card {
-      background: #fff;
-      border-radius: 1rem;
+      background: var(--card);
       padding: 1.5rem;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
     }
 
     .hero-card h3 {
       margin-bottom: 0.8rem;
-      font-size: 1rem;
-      color: #0b2545;
+      font-size: 1.1rem;
+      color: var(--primary);
     }
 
     .pill {
       display: inline-block;
-      background: #e3edf7;
-      color: #1f4f7b;
-      padding: 0.25rem 0.7rem;
+      background: #e9e9ff;
+      color: #3d3d7a;
+      padding: 0.3rem 0.7rem;
       border-radius: 999px;
       font-size: 0.8rem;
-      margin: 0.15rem;
+      margin: 0.2rem;
     }
 
     section {
-      max-width: 1100px;
-      margin: 2.5rem auto;
+      max-width: 1200px;
+      margin: 3rem auto;
       padding: 0 1.5rem;
     }
 
     section h2 {
-      font-size: 1.6rem;
+      font-size: 1.8rem;
       margin-bottom: 1rem;
-      color: #0b2545;
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 1.4rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      margin-bottom: 1.5rem;
     }
 
     .grid {
@@ -161,166 +172,78 @@
       gap: 1.5rem;
     }
 
-    .card {
-      background: #fff;
-      border-radius: 0.9rem;
-      padding: 1.2rem 1.3rem;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
-    }
-
-    .card h3 {
-      font-size: 1.05rem;
-      margin-bottom: 0.4rem;
-      color: #1f4f7b;
-    }
-
-    .card h4 {
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: #555;
-      margin-bottom: 0.4rem;
-    }
-
-    .card small {
-      display: block;
-      font-size: 0.8rem;
-      color: #777;
-      margin-bottom: 0.6rem;
-    }
-
-    .card ul {
-      padding-left: 1.1rem;
-      font-size: 0.9rem;
-    }
-
-    .card ul li {
-      margin-bottom: 0.25rem;
-    }
-
-    .chips {
-      margin-top: 0.6rem;
-    }
-
-    .chips span {
-      font-size: 0.78rem;
-      background: #f1f3f8;
-      padding: 0.2rem 0.6rem;
-      border-radius: 999px;
-      margin-right: 0.3rem;
-      margin-bottom: 0.3rem;
-      display: inline-block;
-    }
-
     .timeline {
-      border-left: 2px solid #dde3f0;
+      border-left: 3px solid #dcdcff;
       padding-left: 1.2rem;
-      margin-top: 0.5rem;
     }
 
     .timeline-item {
-      margin-bottom: 1.2rem;
+      margin-bottom: 1.5rem;
       position: relative;
     }
 
     .timeline-item::before {
       content: "";
       position: absolute;
-      left: -1.35rem;
-      top: 0.25rem;
-      width: 10px;
-      height: 10px;
+      left: -1.1rem;
+      top: 0.3rem;
+      width: 12px;
+      height: 12px;
       background: var(--accent);
       border-radius: 50%;
     }
 
     .timeline-item h3 {
-      font-size: 1rem;
+      font-size: 1.1rem;
+      font-weight: 600;
       margin-bottom: 0.2rem;
     }
 
     .timeline-item small {
-      font-size: 0.8rem;
       color: #777;
-    }
-
-    .contact {
-      display: grid;
-      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
-      gap: 1.5rem;
-      align-items: flex-start;
-    }
-
-    .contact-details p {
-      margin-bottom: 0.4rem;
-      font-size: 0.95rem;
-    }
-
-    .contact-details a {
-      color: var(--primary);
-      text-decoration: none;
-    }
-
-    .contact-details a:hover {
-      text-decoration: underline;
-    }
-
-    form {
-      background: #fff;
-      padding: 1.2rem 1.3rem;
-      border-radius: 0.9rem;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
-    }
-
-    label {
-      display: block;
       font-size: 0.85rem;
-      margin-bottom: 0.25rem;
+    }
+    /* ABOUT + SKILLS + PROJECTS + CONTACT SECTIONS */
+
+    .card h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      color: var(--secondary);
+    }
+
+    .card p {
+      font-size: 0.95rem;
       color: #444;
     }
 
-    input,
-    textarea {
-      width: 100%;
-      padding: 0.55rem 0.6rem;
-      margin-bottom: 0.7rem;
-      border-radius: 0.4rem;
-      border: 1px solid #ccd4e0;
-      font-size: 0.9rem;
-    }
-
-    textarea {
-      min-height: 90px;
-      resize: vertical;
+    .chips span {
+      display: inline-block;
+      background: #f0e6ff;
+      color: #4b2e83;
+      padding: 0.3rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      margin: 0.2rem;
     }
 
     footer {
       text-align: center;
-      padding: 1.5rem 1rem 2rem;
-      font-size: 0.85rem;
-      color: #777;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
+      background: var(--secondary);
+      color: #fff;
+      font-size: 0.9rem;
     }
 
-    footer a {
-      color: var(--primary);
-      text-decoration: none;
-    }
-
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
       .hero {
         grid-template-columns: 1fr;
-      }
-      .contact {
-        grid-template-columns: 1fr;
-      }
-      nav {
-        display: none;
-      }
-      header {
-        text-align: center;
       }
     }
   </style>
 </head>
+
 <body>
 
 <header>
@@ -330,7 +253,6 @@
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#experience">Experience</a>
-      <a href="#achievements">Achievements</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -342,10 +264,12 @@
 <section class="hero">
   <div>
     <h1>Data, Risk & Behavioural Insight Analyst</h1>
-    <h2>Transforming sensitive, complex datasets into clarity, safety, and evidence‑based decisions.</h2>
+    <h2>Turning complex, sensitive datasets into clarity, safety, and informed decisions.</h2>
+
     <p class="tagline">
       Specialist in risk analysis, behavioural insight, safeguarding intelligence, and operational decision support.
     </p>
+
     <p>
       I’m <strong>Stella A. Ibor</strong>, an analytical professional with experience across justice, operational, and care environments.
       I specialise in identifying harm patterns, analysing behavioural indicators, and producing actionable intelligence
@@ -385,32 +309,31 @@
 
 <section id="skills">
   <h2>Technical Skills</h2>
+
   <div class="grid">
     <div class="card">
       <h3>Data & Analytics</h3>
-      <ul>
-        <li>Python (pandas, NumPy, Matplotlib, Seaborn)</li>
-        <li>SQL (extraction, transformation, optimisation)</li>
-        <li>Power BI (DAX, modelling, dashboards)</li>
-        <li>Tableau (visual analytics)</li>
-        <li>Excel (advanced formulas, automation)</li>
-      </ul>
+      <p>Python (pandas, NumPy, Matplotlib, Seaborn)</p>
+      <p>SQL (extraction, transformation, optimisation)</p>
+      <p>Power BI (DAX, modelling, dashboards)</p>
+      <p>Tableau (visual analytics)</p>
+      <p>Excel (advanced formulas, automation)</p>
     </div>
+
     <div class="card">
       <h3>Professional Capabilities</h3>
-      <ul>
-        <li>Risk assessment & harm pattern identification</li>
-        <li>Behavioural insight & escalation analysis</li>
-        <li>Data governance & ethical handling</li>
-        <li>Trend analysis & predictive indicators</li>
-        <li>Stakeholder communication</li>
-      </ul>
+      <p>Risk assessment & harm pattern identification</p>
+      <p>Behavioural insight & escalation analysis</p>
+      <p>Data governance & ethical handling</p>
+      <p>Trend analysis & predictive indicators</p>
+      <p>Stakeholder communication</p>
     </div>
   </div>
 </section>
 
 <section id="experience">
   <h2>Employment History</h2>
+
   <div class="timeline">
 
     <div class="timeline-item">
@@ -469,27 +392,6 @@
 
   </div>
 </section>
-
-<section id="achievements">
-  <h2>Key Achievements</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Risk Trend Dashboard</h3>
-      <p>Enabled earlier intervention and reduced high‑risk incidents by <strong>22%</strong> in six months.</p>
-    </div>
-    <div class="card">
-      <h3>Documentation Accuracy Improvement</h3>
-      <p>Improved care documentation accuracy from <strong>68%</strong> to <strong>95%</strong> in three months.</p>
-    </div>
-    <div class="card">
-      <h3>Harm Recurrence Reduction</h3>
-      <p>Reduced repeat harm incidents by <strong>30%</strong> in one quarter through monitoring improvements.</p>
-    </div>
-    <div class="card">
-      <h3>Medication Error Reduction</h3>
-      <p>Cut medication timing errors by <strong>40%</strong> in eight weeks through workflow optimisation.</p>
-    </div>
-  </div>
 </section>
 
 <section id="projects">
@@ -501,6 +403,7 @@
       <h3>Risk Trend Dashboard</h3>
       <p>Power BI dashboard analysing behavioural indicators, escalation triggers, and risk patterns.</p>
     </div>
+
     <div class="card">
       <h3>Operational Performance Dashboard</h3>
       <p>Tracked KPIs, staffing, incidents, and compliance metrics for leadership decision‑making.</p>
@@ -513,6 +416,7 @@
       <h3>Behavioural Pattern Analysis</h3>
       <p>Python + SQL workflow identifying early signs of harm, anomalies, and behavioural change.</p>
     </div>
+
     <div class="card">
       <h3>Multi‑Source Data Integration</h3>
       <p>Combined operational, behavioural, and incident datasets to produce predictive indicators.</p>
@@ -525,6 +429,7 @@
       <h3>Care Plan Audit Tool</h3>
       <p>Improved documentation accuracy from 68% to 95% through audit analysis and workflow redesign.</p>
     </div>
+
     <div class="card">
       <h3>Harm Recurrence Monitoring</h3>
       <p>Reduced repeat harm incidents by 30% using data‑driven monitoring and escalation checks.</p>
@@ -537,6 +442,29 @@
       <h3>Resource Allocation Analysis</h3>
       <p>Supported strategic planning and operational efficiency through quantitative analysis.</p>
     </div>
+
     <div class="card">
       <h3>Performance Gap Identification</h3>
-      <p>Identified operational inefficiencies and recommended improvements based
+      <p>Identified operational inefficiencies and recommended improvements based on data insights.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+
+  <div class="card">
+    <p><strong>Email:</strong> <a href="mailto:iboraboghenestella@gmail.com">iboraboghenestella@gmail.com</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/stella-ibor-2694ba241" target="_blank">linkedin.com/in/stella-ibor-2694ba241</a></p>
+    <p><strong>GitHub:</strong> <a href="https://github.com/DavStella" target="_blank">github.com/DavStella</a></p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  © 2026 Stella A. Ibor — Data & Risk Analyst
+</footer>
+
+</body>
+</html>
